@@ -1,0 +1,3 @@
+sample-id,absolute-filepath,direction
+sample-1,/Users/stronglab2/Documents/Microbiome_Demo/data/trimmed_mock_R1.fastq.gz,forward
+sample-1,/Users/stronglab2/Documents/Microbiome_Demo/data/trimmed_mock_R2.fastq.gz,reverse
