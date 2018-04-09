@@ -10,88 +10,67 @@
 [What is the Microbiome?](#intro)     
 [Workflow](#workflow)   
 [Installing Tools](#install)    
-[Dada2 Usage](#usage)     
-[Additional Functionality](#additional)    
+[Workflow Usage](#usage)        
 
 ## <a name="intro"></a>What is the Microbiome?
 
-GRAB is short for Genomic Retrieval and Blast Database Creation. GRAB currently is only able to mine **bacterial** genomic information by taxonomy. GRAB consists of python scripts to mine the NCBI FTP sites for genomes, coding regions, or proteins of interest. 
+The microbiome is a collection of all microorganisms in a niche. For the purposes of this demo, we focus solely on the bacterial microbiome. The bacterial microbiome is accessible via a universally conserved gene sequence called the 16s ribosomal RNA. 
+
+## <a name="workflow"></a>Microbiome Workflow
+
+To identify the bacterial taxa in a niche, a region of the 16s ribosomal RNA gene is amplified and sequenced. This repository stores two workflows to analyze the resulting 16s sequences though more information about the workflows and additional techniques can be found:
+
+- [Dada2](http://benjjneb.github.io/dada2/index.html)
+
+- [Qiime2](https://docs.qiime2.org)
 
 
-## <a name="workflow"></a>GRAB Workflow
+## <a name="install"></a>Installing Items for Workflows
 
-%<p align="center"><img src="https://github.com/glickmac/GRAB/blob/master/images/GRAB.png" 
+Software:
 
- 
-[BLAST makeblastdb Example](https://www.haktansuren.com/blast-makeblastdb/) 
+Optional but highly recommended to install Qiime
 
-A helpful post on BLAST command makeblastdb 
-   
 
-## <a name="install"></a>Installing GRAB
++ Anaconda: [download](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) 
 
-Required software
-+ NCBI-BLAST: [download](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) 
-Must be in environmental path
-+ Argparse & Pandas: 
++ Qiime w/ Anaconda (On Command-Line):
 ```
-pip install argparse
-pip install pandas
-```
-[Argparse](https://pypi.python.org/pypi/argparse/)
+wget https://data.qiime2.org/distro/core/qiime2-2018.2-py35-osx-conda.yml
+conda env create -n qiime2-2018.2 --file qiime2-2018.2-py35-osx-conda.yml
 
-## [Download GRAB](https://github.com/glickmac/GRAB/raw/master/GRAB.zip)
-
-#### Unzip GRAB and CD into Directory
-
-```
-unzip GRAB.zip
-cd GRAB
+## Optional Cleanup 
+rm qiime2-2018.2-py35-osx-conda.yml
 ```
 
-#### Other installations (Git)
-
++ Jupyter Notebook: 
 ```
-git clone https://github.com/glickmac/GRAB
-```
-
-
-
-## <a name="usage"></a>Using 
-
-
-+ GRAB.py Help: 
-
-```
-python GRAB.py -h
+pip install jupyter
 ```
 
-+ Build.py Help: 
-
++ Bioconductor (In R Environment): 
 ```
-python Build.py -h
+source("https://bioconductor.org/biocLite.R")
+biocLite()
 ```
 
-### GRAB.py (Information Retrieval from NCBI)
-
-Either -q or -f is required, however please use only one flag at a time
-
-#### Required arguments :
-
-| Option     | Description                                     |
-|------------|-------------------------------------------------|
-| **-q** or **-f**   | -q: -query seperated by commas **(no spaces)** or -f: -file with query seperated by new lines  |
-| **-l**   | -level: Taxanomic level: options include *phylum, order, class, family, genus, species, or subspecies*  |
-
-
-## <a name="additional"></a>Edge Cases
-
-### Edge Cases
-There exists edge cases which can affect the retrieval in taxonomic querying in GRAB.py. For example, at the species level if the search term Abscessus is used to find Mycobacterial Abscessus species, other bacteria with the term Abscessus will be present in the retreival. To counter, a user must enter the full search term in the query or file. 
-
-For example:
-
++ Dada2 and other packages:
 ```
-python GRAB.py -m genomic -q 'Mycobacterium abscessus' -l species -o Abscessus_species
+source("https://bioconductor.org/biocLite.R")
+biocLite("dada2")
+biocLite("phyloseq")
+install.packages("RColorBrewer")
+install.packages("ggplot2")
 ```
+
++ R Kernal for Jupyter Notebook:
+See installation instructions for IRKernel [here](https://irkernel.github.io/installation/) or directly from the [github repository](https://github.com/IRkernel/IRkernel)
+
+
+Additional instructions for installing the required packages are found within the demo scripts. 
+
+
+## <a name="usage"></a>Using Microbiome Workflows
+
+This repository holds two jupyter workflows one in R (Dada2 & Phyloseq) and one in python (Qiime2). Download this repository and start a jupyter notebook within it to follow along with the scripts. 
 
