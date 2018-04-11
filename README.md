@@ -78,6 +78,20 @@ This repository holds two jupyter workflows one in R ([Dada2 & Phyloseq](https:/
 - [Download this repository](https://github.com/glickmac/Microbiome_Demo/archive/master.zip)
 
 
+- Unzip and move into repository
+```
+cd Microbiome_Demo-master/
+```
 
+##### Activate QIIME Environment on Commandline
 
+```
+source activate qiime2-2018.2
+```
+
+##### Start Jupyter Notebooks
+
+```
+jupyter notebook
+```
 
