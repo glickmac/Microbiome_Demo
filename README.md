@@ -29,7 +29,7 @@ To identify the bacterial taxa in a niche, a region of the 16s ribosomal RNA gen
 
 Software:
 
-Optional but highly recommended to install Qiime
+Optional but highly recommended method to install Qiime using Anaconda
 
 
 + Anaconda: [download](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download) 
