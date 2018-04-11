@@ -83,13 +83,13 @@ This repository holds two jupyter workflows one in R ([Dada2 & Phyloseq](https:/
 cd Microbiome_Demo-master/
 ```
 
-##### Activate QIIME Environment on Commandline
+- Activate QIIME Environment on Commandline
 
 ```
 source activate qiime2-2018.2
 ```
 
-##### Start Jupyter Notebooks
+- Start Jupyter Notebooks
 
 ```
 jupyter notebook
