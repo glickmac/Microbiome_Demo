@@ -72,5 +72,12 @@ Additional instructions for installing the required packages are found within th
 
 ## <a name="usage"></a>Using Microbiome Workflows
 
-This repository holds two jupyter workflows one in R (Dada2 & Phyloseq) and one in python (Qiime2). Download this repository and start a jupyter notebook within it to follow along with the scripts. 
+This repository holds two jupyter workflows one in R ([Dada2 & Phyloseq](https://github.com/glickmac/Microbiome_Demo/blob/master/Dada2_R.ipynb)) and one in python ([Qiime2](https://github.com/glickmac/Microbiome_Demo/blob/master/Qiime_2.ipynb)). 
+
+
+- [Download this repository](https://github.com/glickmac/Microbiome_Demo/archive/master.zip)
+
+
+
+
 
